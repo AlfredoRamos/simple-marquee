@@ -1,0 +1,35 @@
+.marquee {
+	white-space: nowrap;
+	overflow: hidden;
+	box-sizing: border-box;
+
+	ul {
+		margin: 0;
+		list-style: none;
+
+		&.marquee-wrapper {
+			animation-duration: map-get($animation, duration) + (map-get($animation, duration) * 0.5);
+		}
+
+		li {
+			display: inline-block;
+
+			&::before {
+				content: '• ';
+			}
+		}
+	}
+
+	&-wrapper {
+		display: inline-block;
+		padding-left: 100%;
+		animation-name: marquee;
+		animation-duration: map-get($animation, duration);
+		animation-timing-function: map-get($animation, function);
+		animation-iteration-count: map-get($animation, count);
+
+		&:hover {
+			animation-play-state: paused;
+		}
+	}
+}
