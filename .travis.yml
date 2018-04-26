@@ -6,6 +6,9 @@ matrix:
     - rvm: 2.3.6
     - rvm: 2.4.3
     - rvm: ruby-head
+  allow_failures:
+    - rvm: ruby-head
+  fast_finish: true
 
 branches:
   only:
