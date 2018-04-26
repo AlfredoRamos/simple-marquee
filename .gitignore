@@ -1,0 +1,4 @@
+build/
+Gemfile.lock
+*.css
+*.map

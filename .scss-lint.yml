@@ -1,0 +1,27 @@
+scss_files:
+  - 'scss/**/*.scss'
+
+linters:
+  BorderZero:
+    enabled: true
+    convention: none
+  Comment:
+    enabled: true
+    exclude:
+      - scss/main.scss
+  ChainedClasses:
+    enabled: true
+  Indentation:
+    enabled: true
+    character: tab
+    width: 1
+  PlaceholderInExtend:
+    enabled: true
+  PropertySortOrder:
+    enabled: true
+    order: concentric
+  PropertyUnits:
+    enabled: true
+    global: ['rem', '%']
+  TrailingZero:
+    enabled: true

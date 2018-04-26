@@ -1,0 +1,24 @@
+language: ruby
+
+matrix:
+  include:
+    - rvm: 2.2.9
+    - rvm: 2.3.6
+    - rvm: 2.4.3
+    - rvm: ruby-head
+
+branches:
+  only:
+    - master
+
+cache:
+  bundler: true
+
+before_install:
+  - gem update --system
+  - gem update --no-document
+  - gem cleanup
+
+script:
+  - bundle exec rake test
+  - bundle exec rake scss_lint
