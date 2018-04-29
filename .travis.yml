@@ -2,9 +2,10 @@ language: ruby
 
 matrix:
   include:
-    - rvm: 2.2.9
-    - rvm: 2.3.6
-    - rvm: 2.4.3
+    - rvm: 2.2.10
+    - rvm: 2.3.7
+    - rvm: 2.4.4
+    - rmv: 2.5.1
     - rvm: ruby-head
   allow_failures:
     - rvm: ruby-head
