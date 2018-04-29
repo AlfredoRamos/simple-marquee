@@ -14,8 +14,8 @@ class TestCss < Minitest::Test
     @files = ['marquee.css', 'marquee.min.css']
     @files.map! { |file| File.join(@path, file) }
 
-    # Minimum file size (980 B)
-    @size = 980
+    # Minimum file size (1 KiB)
+    @size = (1 * 1024)
 
     # Clean build
     FileUtils.rm(@files, force: true)
