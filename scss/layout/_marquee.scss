@@ -1,35 +1,50 @@
+// Marquee definition
 .marquee {
 	overflow: hidden;
 	white-space: nowrap;
 	box-sizing: border-box;
 
-	ul {
-		margin: 0;
+	// List
+	> ul {
 		list-style: none;
 
-		&.marquee-wrapper {
-			animation-duration: map-get($animation, duration) + (map-get($animation, duration) * .5);
+		> li {
+			display: inline-block;
 		}
 	}
 
-	li {
-		display: inline-block;
-
-		&::before {
-			content: '• ';
-		}
+	// Pause marquee
+	&:hover &-wrapper {
+		animation-play-state: paused;
 	}
 
+	// Main wrapper
 	&-wrapper {
 		display: inline-block;
 		animation-name: marquee;
-		animation-duration: map-get($animation, duration);
+		animation-duration: map-get($animation, duration); // normal
 		animation-timing-function: map-get($animation, function);
 		animation-iteration-count: map-get($animation, count);
 		padding-left: 100%;
+	}
 
-		&:hover {
-			animation-play-state: paused;
+	// Reverse marquee
+	&-reverse &-wrapper {
+		animation-direction: reverse;
+	}
+
+	// Speed
+	@each $key in (slow, fast) {
+		$duration: map-get($animation, duration);
+
+		@if $key == slow {
+			$duration: map-get($animation, duration) * 2;
+		} @else if $key == fast {
+			$duration: map-get($animation, duration) / 2;
+		}
+
+		&-#{$key} &-wrapper {
+			animation-duration: $duration;
 		}
 	}
 }
