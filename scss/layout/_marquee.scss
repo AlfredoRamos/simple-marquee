@@ -14,12 +14,12 @@
 	}
 
 	// Pause marquee
-	&:hover &-wrapper {
+	&:hover &-content {
 		animation-play-state: paused;
 	}
 
-	// Main wrapper
-	&-wrapper {
+	// Marquee content
+	&-content {
 		display: inline-block;
 		animation-name: marquee;
 		animation-duration: map-get($animation, duration); // normal
@@ -29,22 +29,20 @@
 	}
 
 	// Reverse marquee
-	&-reverse &-wrapper {
+	&-reverse &-content {
 		animation-direction: reverse;
 	}
 
 	// Speed
-	@each $key in (slow, fast) {
-		$duration: map-get($animation, duration);
-
-		@if $key == slow {
-			$duration: map-get($animation, duration) * 2;
-		} @else if $key == fast {
-			$duration: map-get($animation, duration) / 2;
+	@for $factor from 2 through 5 {
+		// Slower
+		&-speed-sx#{$factor} &-content {
+			animation-duration: map-get($animation, duration) * $factor;
 		}
 
-		&-#{$key} &-wrapper {
-			animation-duration: $duration;
+		// Faster
+		&-speed-fx#{$factor} &-content {
+			animation-duration: map-get($animation, duration) / $factor;
 		}
 	}
 }
