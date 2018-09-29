@@ -5,7 +5,7 @@ group :development do
   gem 'autoprefixer-rails'
   gem 'mini_racer'
   gem 'rake'
-  gem 'sass', '~>3.5.0'
+  gem 'sassc'
 end
 
 group :test do
