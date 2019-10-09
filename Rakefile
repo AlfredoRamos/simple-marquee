@@ -1,9 +1,15 @@
+# frozen_string_literal: true
+
 require 'rake/testtask'
 require 'sassc'
 require 'autoprefixer-rails'
+require 'rubocop/rake_task'
 require 'scss_lint/rake_task'
 
 $stdout.sync = $stderr.sync = true
+
+# RuboCop
+RuboCop::RakeTask.new
 
 # Tests
 Rake::TestTask.new(:test) do |t|
