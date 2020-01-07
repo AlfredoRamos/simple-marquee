@@ -4,5 +4,5 @@ Metrics/BlockLength:
 Metrics/LineLength:
   Max: 80
 
-Layout/IndentFirstArgument:
+Layout/FirstArgumentIndentation:
   EnforcedStyle: consistent
