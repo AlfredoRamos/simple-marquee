@@ -1,9 +1,10 @@
 ### About
 
-Simple SASS Grid System
+Simple Marquee
 
 [![Build Status](https://img.shields.io/travis/com/AlfredoRamos/simple-marquee.svg?style=flat-square)](https://travis-ci.com/AlfredoRamos/simple-marquee)
 [![Latest Stable Version](https://img.shields.io/github/tag/AlfredoRamos/simple-marquee.svg?style=flat-square&label=stable)](https://github.com/AlfredoRamos/simple-marquee/releases)
+[![Code Quality](https://img.shields.io/codefactor/grade/github/AlfredoRamos/simple-marquee.svg?style=flat-square)](https://www.codefactor.io/repository/github/alfredoramos/simple-marquee)
 [![License](https://img.shields.io/github/license/AlfredoRamos/simple-marquee.svg?style=flat-square)](https://raw.githubusercontent.com/AlfredoRamos/simple-marquee/master/LICENSE)
 
 Precompiled CSS files (`marquee.css` and `marquee.min.css`) can be found in [this gist](https://gist.github.com/AlfredoRamos/241ebc49763fd6d8d805878e29b9c804). A live demo is hosted at [Simple Marquee](https://alfredoramos.github.io/simple-marquee).
