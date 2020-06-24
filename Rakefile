@@ -34,7 +34,7 @@ class Helper
   def compile_scss(args = {})
     unless args.key?(:output)
       args[:output] = args[:input]
-        .sub(%r{^scss/}, 'build')
+        .sub(%r{^scss/}, 'build/')
         .sub(/\.scss$/, '.css')
     end
 
@@ -106,7 +106,7 @@ end
 
 namespace :build do
   files = {
-    scss: ['scss/main.scss']
+    scss: Dir.glob('scss/*.scss')
   }
 
   helper = Helper.new(logger)
@@ -117,7 +117,6 @@ namespace :build do
     files[:scss].each do |file|
       helper.compile_scss(
         input: file,
-        output: File.join('build', 'marquee.css'),
         style: :expanded
       )
     end

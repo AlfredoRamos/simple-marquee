@@ -8,7 +8,7 @@ linters:
   Comment:
     enabled: true
     exclude:
-      - scss/main.scss
+      - scss/marquee.scss
   ChainedClasses:
     enabled: true
   Indentation:
