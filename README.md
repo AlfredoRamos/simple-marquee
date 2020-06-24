@@ -11,8 +11,8 @@ Precompiled CSS files (`marquee.css` and `marquee.min.css`) can be found in [thi
 
 ### Dependencies
 
-- Ruby >= 2.2.0
-- Bundler [[info](https://bundler.io/)]
+- Ruby >= 2.4.0
+- Bundler
 
 For a list of gem dependencies, see the [Gemfile](https://github.com/AlfredoRamos/simple-marquee/blob/master/Gemfile).
 
@@ -29,7 +29,7 @@ rake build:css
 **Minified**
 
 ```shell
-rake build:minified
+rake build:minify
 ```
 
 **Both**
