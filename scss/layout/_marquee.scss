@@ -13,11 +13,6 @@
 		}
 	}
 
-	// Pause marquee
-	&:hover &-content {
-		animation-play-state: paused;
-	}
-
 	// Marquee content
 	&-content {
 		display: inline-block;
@@ -31,6 +26,11 @@
 	// Reverse marquee
 	&-reverse &-content {
 		animation-direction: reverse;
+	}
+
+	// Pause marquee
+	&:hover &-content {
+		animation-play-state: paused;
 	}
 
 	// Speed
