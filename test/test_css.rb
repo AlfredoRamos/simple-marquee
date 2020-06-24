@@ -23,20 +23,14 @@ class TestCss < Minitest::Test
     FileUtils.rm(@files, force: true)
   end
 
-  def test_css_file
+  def test_css_files
     assert !File.exist?(@files.first)
-
     Rake::Task['build:css'].invoke
-
     assert File.exist?(@files.first)
     assert_operator File.size(@files.first), :>=, @size
-  end
 
-  def test_minified_css_file
     assert !File.exist?(@files.last)
-
-    Rake::Task['build:minified'].invoke
-
+    Rake::Task['build:minify'].invoke
     assert File.exist?(@files.last)
     assert_operator File.size(@files.last), :>=, @size
   end
