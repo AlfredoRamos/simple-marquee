@@ -1,7 +1,6 @@
 * text=auto
 test/ export-ignore
 .github/ export-ignore
-.dependabot/ export-ignore
 .travis.yml export-ignore
 .scss-lint.yml export-ignore
 .rubocop.yml export-ignore
