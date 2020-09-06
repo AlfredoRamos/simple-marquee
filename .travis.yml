@@ -1,9 +1,11 @@
 language: ruby
-dist: xenial
+dist: focal
 
-matrix:
+jobs:
   include:
-    - rvm: 2.4
+    - os: linux
+      dist: bionic
+      rvm: 2.4
     - rvm: 2.5
     - rvm: 2.6
     - rvm: 2.7
