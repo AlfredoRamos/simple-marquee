@@ -9,7 +9,7 @@ Simple CSS Marquee.
 
 Generates an animation effect that horizontally scrolls elements, like text or images. It tries to mimic what the obsolete [`<marquee>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/marquee) tag did, using only CSS.
 
-Precompiled CSS files (`marquee.css` and `marquee.min.css`) can be found in [this gist](https://gist.github.com/AlfredoRamos/241ebc49763fd6d8d805878e29b9c804). A live demo is hosted at [Simple Marquee](https://alfredoramos.github.io/simple-marquee).
+Precompiled CSS files (`marquee.css` and `marquee.min.css`) can be found in [this gist](https://gist.github.com/AlfredoRamos/241ebc49763fd6d8d805878e29b9c804). A live demo is hosted at [Simple Marquee](https://alfredoramos.mx/simple-marquee).
 
 ### Dependencies
 
