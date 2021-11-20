@@ -2,13 +2,8 @@ name: CI
 
 on:
   push:
-    branches:
-      - master
+    branches: [master]
   pull_request:
-    types:
-      - opened
-      - synchronize
-      - reopened
 
 jobs:
   test:
@@ -19,7 +14,7 @@ jobs:
         ruby-version: ['2.4', '2.5', '2.6', '2.7', '3.0']
     steps:
     - name: Checkout sources
-      uses: actions/checkout@master
+      uses: actions/checkout@v2
 
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
